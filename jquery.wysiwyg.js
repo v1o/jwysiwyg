@@ -560,6 +560,7 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 			"groupIndex",
 			"hotkey",
 			"icon",
+			"separator",
 			"tags",
 			"tooltip",
 			"visible"
