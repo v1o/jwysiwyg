@@ -510,7 +510,7 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 			events: {},
 			autoGrow: false,
 			autoSave: true,
-			brIE: true,					// http://code.google.com/p/jwysiwyg/issues/detail?id=15
+			brIE: false,					// http://code.google.com/p/jwysiwyg/issues/detail?id=15
 			formHeight: 270,
 			formWidth: 440,
 			iFrameClass: null,
@@ -1475,31 +1475,25 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 								self.insertHtml('<br/>');
 							}						
 						} else {
-							var sel = self.editorDoc.getSelection();
-							if (sel && sel.getRangeAt && sel.rangeCount) {
-								var range = sel.getRangeAt(0);
+							var selection = self.editorDoc.getSelection();
+							if (selection && selection.getRangeAt && selection.rangeCount) {
+								var range = selection.getRangeAt(0);
 								if (!range)
 									return true;
+								
+								// Replace selected content by a newline
+								var newlineEl = document.createElement('br');
 								range.deleteContents();
+								range.insertNode(newlineEl);
 
-								var el = document.createElement("div");
-								el.innerHTML = "<br/>";
-								var frag = document.createDocumentFragment(), node, lastNode;
-								while ( (node = el.firstChild) ) {
-									lastNode = frag.appendChild(node);
-								}
-								range.insertNode(frag);
-
-								// Preserve the selection
-								if (lastNode) {
-									range = range.cloneRange();
-									range.setStartAfter(lastNode);
-									range.collapse(true);
-									sel.removeAllRanges();
-									sel.addRange(range);
-								}
-							} else
+								// Remove selection and place cursor after newline
+								range.setStartAfter(newlineEl);
+								range.collapse(true);
+								selection.removeAllRanges();
+								selection.addRange(range);
+							} else {
 								return true;
+							}
 
 						}
 						return false;
