@@ -302,7 +302,7 @@
 		
 		// Get the selection range, functions for editor instance, and within the editor.
 		function getInternalRange() {
-			var selection = getInteralSelection();
+			var selection = getInternalSelection();
 			if (!selection) return null;
 
 			if (selection.rangeCount && selection.rangeCount > 0) return selection.getRangeAt(0); // w3c
