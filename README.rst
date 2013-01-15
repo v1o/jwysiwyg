@@ -204,6 +204,10 @@ the wysiwyg() function when it is first called on a textarea. Available keys are
 
 ``brIE``
     A boolean. If ``true``, a ``<br/>`` will be inserted for a newline in IE.
+    This is also true for other browsers and may seem a bit peculiar for users 
+    if they use "Header 1", or similar styles. The ENTER key will no longer reset
+    the style to "Paragraph", but continue writing "Header 1" until users explicitly
+    choose "Paragraph" in the toolbar.
 
 ``formHeight``
     An integer. Height of dialog form.
