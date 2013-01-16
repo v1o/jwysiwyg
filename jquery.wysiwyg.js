@@ -2071,9 +2071,7 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 			quirks: [],
 			
 			assert: function(expression, message) {
-				if (!expression) {
-					throw Error(message);
-				}
+				if (!expression) throw Error(message);
 			},
 			
 			register: function(quirk) {
