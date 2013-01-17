@@ -220,7 +220,7 @@
 							this.element.resizable("destroy");
 						}
 
-						this.ui.toolbar.find("li").each(function () {
+						this.ui.toolbar.find("li").each(function() {
 							var li = $(this);
 
 							if (li.hasClass("html")) {
