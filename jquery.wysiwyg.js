@@ -1357,14 +1357,12 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 			var self = this.self,
 				stylesheet,
 				growHandler,
-				saveHandler;
+				saveHandler,
+				toolbarWrapEl;
 
+			toolbarWrapEl = $('<div class="toolbar-wrap"><div style="clear: both"><!-- --></div>').prepend(self.ui.toolbar);
 			self.ui.appendControls();
-			self.element.append(self.ui.toolbar)
-				.append($("<div><!-- --></div>")
-					.css({
-						clear: "both"
-					}))
+			self.element.append(toolbarWrapEl)
 				.append(self.editor)
 				.append(self.original);
 
