@@ -205,8 +205,8 @@
 						this.saveContent(filter);
 
 						$(this.original).css({
-							width:	this.element.outerWidth() - 6,
-							height: this.element.height() - this.ui.toolbar.height() - 6,
+							width:	this.element.outerWidth(),
+							height: this.element.height() - this.ui.toolbar.height(),
 							resize: "none"
 						}).show();
 						this.editor.hide();
