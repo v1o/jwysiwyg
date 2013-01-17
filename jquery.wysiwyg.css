@@ -68,6 +68,7 @@ div.wysiwyg ul.toolbar li.cssWrap { background-position: -92px -106px; }
 div.wysiwyg-dialogRow { float:left; width:100%; font-size: 16px; }
 
 div.wysiwyg iframe { clear: left; background-color:white; padding:0px; margin:0; display:block; width: 100%; }
+div.wysiwyg > textarea { border: 0; outline: none; box-shadow: none; }
 
 /* dialog */
 .wysiwyg-dialog { position:fixed; top:50px; left:50px; width:450px; height:300px; background:transparent; font:14px "Helvetic Neue", Helvetica,Arial,sans-serif; }

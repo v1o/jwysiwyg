@@ -205,8 +205,8 @@
 						this.saveContent(filter);
 
 						$(this.original).css({
-							width:	this.element.outerWidth(),
-							height: this.element.height() - this.ui.toolbar.height(),
+							width:	this.editor.width(),
+							height: this.editor.height(),
 							resize: "none"
 						}).show();
 						this.editor.hide();
@@ -968,6 +968,9 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 			for (i = 0; i < this.timers.length; i += 1) {
 				window.clearTimeout(this.timers[i]);
 			}
+			
+			// Move textarea back to its original position
+			$(this.original).appendTo($(this.element.parent()));
 
 			// Remove bindings
 			$form.unbind(".wysiwyg");
@@ -1362,7 +1365,8 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 					.css({
 						clear: "both"
 					}))
-				.append(self.editor);
+				.append(self.editor)
+				.append(self.original);
 
 			self.editorDoc = self.innerDocument();
 
