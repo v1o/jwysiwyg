@@ -97,8 +97,8 @@
 				groupIndex: 7,
 				visible: true,
 				className: "h1",
-				command: ($.browser.msie || $.browser.safari) ? "FormatBlock" : "heading",
-				"arguments": ($.browser.msie || $.browser.safari) ? "<h1>" : "h1",
+				command: ($.browser.msie || $.browser.opera) ? "FormatBlock" : "heading",
+				"arguments": ($.browser.msie || $.browser.opera) ? "<h1>" : "h1",
 				tags: ["h1"],
 				tooltip: "Header 1"
 			},
@@ -107,8 +107,8 @@
 				groupIndex: 7,
 				visible: true,
 				className: "h2",
-				command: ($.browser.msie || $.browser.safari)	? "FormatBlock" : "heading",
-				"arguments": ($.browser.msie || $.browser.safari) ? "<h2>" : "h2",
+				command: ($.browser.msie || $.browser.opera)	? "FormatBlock" : "heading",
+				"arguments": ($.browser.msie || $.browser.opera) ? "<h2>" : "h2",
 				tags: ["h2"],
 				tooltip: "Header 2"
 			},
@@ -117,8 +117,8 @@
 				groupIndex: 7,
 				visible: true,
 				className: "h3",
-				command: ($.browser.msie || $.browser.safari) ? "FormatBlock" : "heading",
-				"arguments": ($.browser.msie || $.browser.safari) ? "<h3>" : "h3",
+				command: ($.browser.msie || $.browser.opera) ? "FormatBlock" : "heading",
+				"arguments": ($.browser.msie || $.browser.opera) ? "<h3>" : "h3",
 				tags: ["h3"],
 				tooltip: "Header 3"
 			},
@@ -134,7 +134,7 @@
 				exec: function () {
 					var command, node, selection, args;
 
-					if ($.browser.msie || $.browser.safari) {
+					if ($.browser.msie || $.browser.opera) {
 						command = "backcolor";
 					} else {
 						command = "hilitecolor";
@@ -390,7 +390,7 @@
 				visible: false,
 				className: "paragraph",
 				command: "FormatBlock",
-				"arguments": ($.browser.msie || $.browser.safari) ? "<p>" : "p",
+				"arguments": ($.browser.msie || $.browser.opera) ? "<p>" : "p",
 				tags: ["p"],
 				tooltip: "Paragraph"
 			},
@@ -1059,7 +1059,7 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 		this.increaseFontSize = function () {
 			if ($.browser.mozilla || $.browser.opera) {
 				this.editorDoc.execCommand("increaseFontSize", false, null);
-			} else if ($.browser.safari) {				
+			} else if ($.browser.opera) {				
 				var Range = this.getInternalRange(),
 					Selection = this.getInternalSelection(),
 					newNode = this.editorDoc.createElement("big");
@@ -1088,7 +1088,7 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 		this.decreaseFontSize = function () {
 			if ($.browser.mozilla || $.browser.opera) {
 				this.editorDoc.execCommand("decreaseFontSize", false, null);
-			} else if ($.browser.safari) {
+			} else if ($.browser.opera) {
 				var Range = this.getInternalRange(),
 					Selection = this.getInternalSelection(),
 					newNode = this.editorDoc.createElement("small");
