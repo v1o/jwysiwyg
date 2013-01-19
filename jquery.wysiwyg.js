@@ -2510,7 +2510,7 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 				browser.safari = true;
 			}
 			return browser;
-		}
+		};
 	}
 
 	$.fn.wysiwyg = function (method) {
