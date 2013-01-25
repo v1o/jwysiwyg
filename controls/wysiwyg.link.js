@@ -151,15 +151,20 @@
 							Wysiwyg.saveContent();
 
 							$(dialog).dialog("close");
+
+							 Wysiwyg.ui.focus();
+							 return false;
 						});
 						$("input:reset", dialog).click(function (e) {
 							e.preventDefault();
 							$(dialog).dialog("close");
+							Wysiwyg.ui.focus();
 						});
 					},
 					close: function (ev, ui) {
 						dialog.dialog("destroy");
 						dialog.remove();
+						Wysiwyg.ui.focus();
 					}
 				});
 			} else {
