@@ -366,7 +366,7 @@ the wysiwyg() function when it is first called on a textarea. Available keys are
     ``quote`` control which creates ``<blockquote>`` tags, we could do specify
     this key::
     
-        quote: { visible; true, tags: ['blockquote'], css: { class: 'quote', className: 'quote' } }
+        quote: { visible: true, tags: ['blockquote'], css: { class: 'quote', className: 'quote' } }
     
     Note that when defining custom controls, you will most likely want to add
     additional CSS to style the resulting toolbar button. The CSS to style a
