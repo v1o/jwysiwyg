@@ -45,7 +45,7 @@
 				if ($.wysiwyg.i18n) {
 					translation = $.wysiwyg.i18n.t(dialogReplacements[key], "dialogs.link");
 
-					if (translation === dialogReplacements[key]) { // if not translated search in dialogs 
+					if (translation === dialogReplacements[key]) { // if not translated search in dialogs
 						translation = $.wysiwyg.i18n.t(dialogReplacements[key], "dialogs");
 					}
 
@@ -69,7 +69,7 @@
 				a.target = a.self.target ? a.self.target : "";
 			}
 
-			if ($.fn.dialog) {
+			if ($.fn.dialog && false) {
 				elements = $(formLinkHtml);
 				elements.find("input[name=linkhref]").val(a.href);
 				elements.find("input[name=linktitle]").val(a.title);
@@ -241,7 +241,7 @@
 				if (rangeContents!=null && rangeContents.childNodes && rangeContents.childNodes.length>0)
 					isNodeSelected = true;
 			}
-			
+
 			if ( (selection && selection.length > 0) || isNodeSelected ) {
 				if ($.browser.msie) {
 					oWysiwyg.ui.focus();
@@ -252,7 +252,7 @@
 				if (title) {
 					oWysiwyg.insertHtml('<a href="'+url+'">'+title+'</a>');
 				} else {
-					if (oWysiwyg.options.messages.nonSelection) 
+					if (oWysiwyg.options.messages.nonSelection)
 						window.alert(oWysiwyg.options.messages.nonSelection);
 				}
 			}
