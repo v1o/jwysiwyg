@@ -32,3 +32,23 @@ $.fn.wysiwyg ? $("textarea.richText").wysiwyg({
 Step 3:
 -------
 Enjoy.
+
+Notes:
+------
+When activated, the spellchecker plugin will generate a list of unique words to check and send them to your spellcheckUrl 
+as space-separated string under the parameter name: words.
+eg: words=mey dodgey werd list
+
+Your server side code should then check these words against a dictionary and return the following schema:
+{
+	result: []
+}
+where the array is a list of the words that are suspect.
+The spellchecker will then highlight these suspect words in your editor.
+When you click on a highlighted word, another request will be sent, this time with a single name parameter pair:
+word=<word to check for suggestions>
+Your server side code should then compile a list of suggestions for this word and return it in the same format as before:
+{
+	result[<suggestions>]
+}
+If there are no suggestions simply return an empty array.
