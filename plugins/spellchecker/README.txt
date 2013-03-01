@@ -31,6 +31,11 @@ $.fn.wysiwyg ? $("textarea.richText").wysiwyg({
 
 Step 3:
 -------
+Implement a server side controller that accepts the necessary parameters (see notes) and returns that all important spellcheck data.
+(See SpellcheckController.java for a java example that uses the Spring framework and the Jazzy spell engine (http://jazzy.sourceforge.net/)
+
+Step 4:
+-------
 Enjoy.
 
 Notes:
