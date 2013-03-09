@@ -397,6 +397,7 @@ the wysiwyg() function when it is first called on a textarea. Available keys are
     * ``insertHorizontalRule``: Insert horizontal rule.
     * ``createLink``: Create a link from the selected text, by prompting the
       user for the URL.
+    * ``unLink``: Remove a link from the selected text.
     * ``insertImage``: Insert an image, by prompting the user for the image path.
     * ``h1``: Make text an h1 header
     * ``h2``: Make text an h2 header
