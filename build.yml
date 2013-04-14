@@ -1,7 +1,7 @@
 # Library information
 name: 'jquery.wysiwyg.js'
 description: 'jquery wysiwyg plugin'
-version: '0.0.98.dev'
+version: '0.98.dev'
 debug: 'true'
 
 # Paths for all files
@@ -17,15 +17,15 @@ output:
   minified: 'jquery.wysiwyg.min.js'
 
 # Source files (in order of import)
-input:
-  - prefix.js
-  - core.js
+#input:
+#  - prefix.js
+#  - core.js
 #  - no_conflict.js
-  - utils.js
-  - editor.js
-  - dom.js
-  - selection.js  
-  - toolbar.js
-  - dialog.js
-  - plugins.js
-  - suffix.js
+#  - utils.js
+#  - editor.js
+#  - dom.js
+#  - selection.js  
+#  - toolbar.js
+#  - dialog.js
+#  - plugins.js
+#  - suffix.js
