@@ -28,7 +28,6 @@ task :package => :prepare do
     f.write([ copyright, source_files ].join("\n\n"))
   end
   puts "Done..."
-
 end
 
 desc 'Package and minify'
@@ -50,7 +49,6 @@ task :minify => [:prepare, :package] do
   minified  = release.read_file(destfile)
   File.open("#{destfile}", 'w'){ |f| f.write([copyright, minified].join("\n\n")) }  
   puts "Done..."
-  
 end
 
 desc 'JSLint the packaged file'
@@ -61,7 +59,8 @@ end
 
 desc 'Clean dist folders'
 task :clean do
-  options = fetch_options
+  release = Release.new
+  options = release.options()
   system("rm -rf dist/#{options['version']}")
 end
 
@@ -85,7 +84,6 @@ task :prepare do
       end
     METHOD
   end
-  
 end
 
 task :default => :build
@@ -148,5 +146,4 @@ class Release
   def source_files
     @source_files ||= [options['input']].flatten.compact
   end
-  
 end
