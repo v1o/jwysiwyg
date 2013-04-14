@@ -630,6 +630,44 @@ Contributing
 Read document `help/docs/contributing.rst
 <https://github.com/akzhan/jwysiwyg/blob/master/help/docs/contributing.rst>`_
 
+=====================
+How to build jWYSIWYG
+=====================
+
+Run:
+
+.. code:: bash
+
+    $ git clone git://github.com/jquery/jquery.git
+    $ cd jwysiwyg/
+    $ git submodule update --init
+    
+    to make uglify work::
+    
+    	ln -s "`pwd`/build/uglify/uglify-js.js ~/.node_libraries/
+    
+    to build Jasmine:
+
+        .. code:: bash
+
+        $ cd test/lib/jasmine
+        $ rake
+
+    to build jQuery::
+    
+        $ cd test/lib/jquery
+    
+        Following the rules in README
+
+Change directory back to jwysiwyg:
+
+.. code:: bash
+
+    $ cd ../../../
+    $ rake
+
+The built version of jWYSIWYG will be put in the `dist/` subdirectory.
+
 ====================
 Additional Resources
 ====================
