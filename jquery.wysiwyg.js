@@ -1244,7 +1244,9 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 		};
 
 		this.getSelection = function () {
-			return (window.getSelection) ? window.getSelection() : window.document.selection;
+			var selection = (window.getSelection && window.getSelection() !== null && window.getSelection().createRange) ? window.getSelection() : window.document.selection;
+
+			return selection;
 		};
 
 		// :TODO: you can type long string and letters will be hidden because of overflow
