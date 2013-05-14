@@ -1,16 +1,16 @@
 /**
- * WYSIWYG - jQuery plugin 0.97
- * (0.97.2 - From infinity)
+ * WYSIWYG – jQuery plugin 0.98.dev
  *
- * Copyright (c) 2008-2009 Juan M Martinez, 2010-2011 Akzhan Abdulin and all contributors
- * https://github.com/akzhan/jwysiwyg
+ * Copyright © 2008–2009 Juan M Martinez, 2010–2013 Akzhan Abdulin and all contributors
+ * https://github.com/jwysiwyg/jwysiwyg
  *
  * Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
  *
+ * Release: 2013-05-14
+ *
  */
-
 /*jslint browser: true, forin: true, white: true */
 
 (function ($) {
@@ -501,6 +501,7 @@
 			}
 			
 		};
+
 
 		this.defaults = {
 html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" style="margin:0"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body style="margin:0;">INITIAL_CONTENT</body></html>',
@@ -1837,9 +1838,11 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 		};
 	}
 
+
 	/*
 	 * Wysiwyg namespace: public properties and methods
 	 */
+
 	$.wysiwyg = {
 		messages: {
 			noObject: "Something goes wrong, check object"
@@ -2180,6 +2183,7 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 		}
 	};
 
+
 	/**
 	 * Unifies dialog methods to allow custom implementations
 	 * 
@@ -2482,6 +2486,7 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 	});
 	// end Dialog
 
+
 	// $.browser fallback for jQuery 1.9+.
 	if ($.browser === undefined) {
 		jQuery.browser = function () {
@@ -2512,6 +2517,7 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 			return browser;
 		};
 	}
+
 
 	$.fn.wysiwyg = function (method) {
 		var args = arguments, plugin;
