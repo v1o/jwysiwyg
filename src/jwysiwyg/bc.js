@@ -1,6 +1,6 @@
 	// $.browser fallback for jQuery 1.9+.
 	if ($.browser === undefined) {
-		jQuery.browser = function () {
+		$.browser = function () {
 			var ua_match = function (ua) {
 				ua = ua.toLowerCase();
 				var match = /(chrome)[ \/]([\w.]+)/.exec(ua) ||
@@ -26,5 +26,5 @@
 				browser.safari = true;
 			}
 			return browser;
-		};
+		}
 	}
