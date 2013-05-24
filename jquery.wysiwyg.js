@@ -977,11 +977,13 @@ html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 
 		this.getRangeText = function () {
 			var r = this.getInternalRange();
-
-			if (r.toString) {
-				r = r.toString();
-			} else if (r.text) {	// IE
-				r = r.text;
+			
+			if(r){
+				if (r.toString) {
+					r = r.toString();
+				} else if (r.text) {	// IE
+					r = r.text;
+				}
 			}
 
 			return r;
