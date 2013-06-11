@@ -13,40 +13,40 @@
 		throw "lang.nb.js depends on $.wysiwyg.i18n";
 	}
 
-	$.wysiwyg.i18n.lang.cs = {
+	$.wysiwyg.i18n.lang.nb = {
 		controls: {
 			"Bold": "Fet",
 			"Colorpicker": "Fargevelger",
 			"Copy": "Kopier",
-			"Create link": "Lag lenge",
+			"Create link": "Lag lenke",
 			"Cut": "Klipp ut",
-			"Decrease font size": "Mindre skrift",
+			"Decrease font size": "Reduser skriftstørrelse",
 			"Fullscreen": "Fullskjerm",
-			"Header 1": "Stor tittel",
-			"Header 2": "Mellomstor tittel",
-			"Header 3": "Liten tittel",
+			"Header 1": "Overskrift 1",
+			"Header 2": "Overskrift 2",
+			"Header 3": "Overskrift 3",
 			"View source code": "Vis kildekode",
-			"Increase font size": "Større skrift",
-			"Indent": "Rykk inn",
+			"Increase font size": "Øk skriftstørrelse",
+			"Indent": "Innrykk",
 			"Insert Horizontal Rule": "Sett inn horisontal linje",
 			"Insert image": "Sett inn bilde",
-			"Insert Ordered List": "Sett inn organisert liste",
+			"Insert Ordered List": "Sett inn sortert liste",
 			"Insert table": "Sett inn tabell",
-			"Insert Unordered List": "Sett inn uorganisert liste",
+			"Insert Unordered List": "Sett inn usortert liste",
 			"Italic": "Kursiv",
-			"Justify Center": "Midtstill",
-			"Justify Full": "Hele siden",
-			"Justify Left": "Sett tekst til venstre",
-			"Justify Right": "Set tekst til høyre",
+			"Justify Center": "Midtstillt",
+			"Justify Full": "Blokkjustert",
+			"Justify Left": "Ventrejustert",
+			"Justify Right": "Høyrejustert",
 			"Left to Right": "Venstre til høyre",
 			"Outdent": "Rykk ut",
 			"Paste": "Lim inn",
 			"Redo": "Gjør om",
 			"Remove formatting": "Fjern formatering",
 			"Right to Left": "Høyre til venstre",
-			"Strike-through": "Strek igjennom",
-			"Subscript": "Underpotens",
-			"Superscript": "Pontens",
+			"Strike-through": "Gjennomstreking",
+			"Subscript": "Hevet skrift",
+			"Superscript": "Senket skrift",
 			"Underline": "Understrek",
 			"Undo": "Angre"
 		},
@@ -62,29 +62,7 @@
 			},
 
 			fileManager: {
-				"file_manager": "Fil-utforsker",
-				"upload_title": "Last opp fil",
-				"rename_title": "Endre tittelnavn",
-				"remove_title": "Fjern tittel",
-				"mkdir_title": "Lag tittel",
-				"upload_action": "Nahrát nový soubor do aktualního adresáře",
-				"mkdir_action": "Vytvořit nový adresář",
-				"remove_action": "Odstranit tento soubor",
-				"rename_action": "Přejmenovat tento soubor" ,
-				"delete_message": "Jste si jist, že chcete smazat tento soubor?",
-				"new_directory": "Nový adresář",
-				"previous_directory": "Vrať se do přechozího adresáře",
-				"rename": "Přejmenovat",
-				"select": "Vybrat",
-				"create": "Vytvořit",
-				"submit": "Vložit",
-				"cancel": "Zrušit",
-				"yes": "Ano",
-				"no": "Ne"
-			},
-			
-			fileManager: {
-				"file_manager": 		"Utforsker",
+				"file_manager": 		"Filbehandler",
 				"upload_title":			"Last opp fil",
 				"rename_title":			"Gi nytt navn",
 				"remove_title":			"Slett fil",
@@ -118,14 +96,14 @@
 				"None": "Ingen",
 				"Left": "Venstre",
 				"Right": "Høyre",
-				"Select file from server": "Velg fil fra server"
+				"Select file from server": "Velg fil fra tjener"
 			},
 
 			link: {
-				"Insert Link": "Sett inn link",
-				"Link URL": "Link URL",
-				"Link Title": "Linktittel",
-				"Link Target": "Link-mål"
+				"Insert Link": "Sett inn lenke",
+				"Link URL": "Lenke-URL",
+				"Link Title": "Lenketittel",
+				"Link Target": "Lenkemål"
 			},
 
 			table: {

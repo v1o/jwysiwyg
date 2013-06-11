@@ -3,7 +3,7 @@
  * (Pretty girl)
  *
  * Copyright (c) 2008-2009 Juan M Martinez, 2010-2011 Akzhan Abdulin and all contributors
- * https://github.com/akzhan/jwysiwyg
+ * https://github.com/jwysiwyg/jwysiwyg
  *
  * Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
@@ -302,7 +302,7 @@
 		
 		// Get the selection range, functions for editor instance, and within the editor.
 		function getInternalRange() {
-			var selection = getInteralSelection();
+			var selection = getInternalSelection();
 			if (!selection) return null;
 
 			if (selection.rangeCount && selection.rangeCount > 0) return selection.getRangeAt(0); // w3c
